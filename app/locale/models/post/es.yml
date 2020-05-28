@@ -1,0 +1,12 @@
+es:
+  models:
+    post:
+      name: Post
+      attributes:
+        id: ID
+        title: Titulo
+        sub_title: Sub titulo
+        body: Contenido
+        imgage: Imagen
+        created_at: Creado
+        updated_at: Actualizado

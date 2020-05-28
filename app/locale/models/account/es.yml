@@ -1,0 +1,15 @@
+es:
+  models:
+    account:
+      name: Administrador
+      attributes:
+        id: ID
+        name: Nombre
+        surname: Apellidos
+        email: Correo Electrónico
+        crypted_password: Contraseña
+        password: Contraseña
+        password_confirmation: Confirmar Contraseña
+        role: Tipo de usuario
+        created_at: Creado
+        updated_at: Actualizado
