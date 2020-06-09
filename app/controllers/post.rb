@@ -2,6 +2,8 @@ Profile::App.controllers :post do
   
   get :index, :map => '/blog' do
     @post = Post.first
+    @title = "Blog"
+    @stylesheets = ["code", "markdown"]
     render 'index'
   end
 

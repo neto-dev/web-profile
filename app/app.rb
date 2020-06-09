@@ -61,5 +61,8 @@ module Profile
     #     render 'errors/500'
     #   end
     #
+    before do
+      I18n.locale = :es
+    end
   end
 end

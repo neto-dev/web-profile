@@ -1,0 +1,22 @@
+es:
+  layout:
+    lang:
+      langSpanish: "Español"
+      langEnglish: "Inglés"
+    header:
+      descriptionOne: "Hi! I’m"
+      descriptionTwo: "Ernesto V."
+      descriptionThree: "I’m Developer"
+    menu:
+      home: "Inicio"
+      me: "Ernesto Vargas"
+      portfolio: "Portafolio"
+      services: "Servicios"
+      blog: "Blog"
+      videos: "Videos"
+      training: "Entrenamiento"
+      contact: "Contacto"
+  base:
+    index:
+      aboutTitle: "Sobre Mi"
+      aboutText: "Me considero un apasionado del deporte, actualmente practico Soccer amateur y atletismo de fondo, <b> a este ultimo le dedico bastante tiempo</b>. <b><i>“Programo“</i></b> desde los 16 años, comencé con c++, luego pase por visual fox pro (creo no era lenguaje de programación pero mí Profe decía que si). Trate de abrir varias <i>“empresas de desarrollo“</i>, ninguna ha funcionado hasta la fecha (En mis inicios hacia puras porquerías). He desarrollado múltiples sistemas, librerías entre otras cosas las cuales hasta el momento no han sido lo suficientemente <b>buenas</b> (Sí, sigo en Durango y batallo más que un <b><i>“JR.”</i></b> En conseguir trabajo).<br/><b>No soy ingeniero ni licenciado, todo lo he aprendido quemándome el coco, documentación, libros, videos, cursos etc.. Si autodidacta</b>"
