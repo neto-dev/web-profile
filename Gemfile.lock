@@ -62,7 +62,7 @@ GEM
       mime-types (< 4)
       padrino-core (= 0.15.0)
     padrino-support (0.15.0)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-protection (2.0.8.1)
       rack
     rack-test (1.1.0)
