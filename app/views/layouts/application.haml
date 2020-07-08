@@ -11,13 +11,14 @@
     =favicon_tag 'favicon.ico'
     =stylesheet_link_tag 'bulma.min'
     =stylesheet_link_tag 'application'
+    =stylesheet_link_tag 'global'
     =stylesheet_link_tag @stylesheets.present? ? @stylesheets.each { | style | style } : nil
     =yield_content :head
   %body
     #follower
       #circle1
     .curtain-menu{:style => "background-image: url(#{image_path('background-menu')})"}
-      %nav.navbar.is-transparent.is-fixed-top
+      %nav.navbar.is-transparent
         .container
           .navbar-brand
             %a.mouse-over.navbar-item{:href => "/"}
@@ -38,7 +39,7 @@
                     #{I18n.t("layout.lang.langSpanish")}
                   %a.navbar-item{:href => "/"}
                     #{I18n.t("layout.lang.langEnglish")}
-              %a.mouse-over.navbar-item.has-text-white{:href => "/"}
+              %a#close-menu.mouse-over.navbar-item.has-text-white{:href => "#"}
                 %ion-icon.icon.is-medium.has-text-white{name: "close"}
       .container.content-columns
         .columns.is-multiline.is-variable.is-1-mobile.is-0-tablet.is-3-desktop.is-8-widescreen.is-2-fullhd
@@ -59,27 +60,28 @@
           .column.is-half.content-links-menu
             %a.has-text-white.title.is-1.mouse-over{href:"/", class: defined?(@menu) && @menu == 8 ? 'option-menu-selected': 'unselected' } #{I18n.t("layout.menu.contact")}
     %nav#menu.navbar.is-transparent.is-fixed-top
-      .navbar-brand
-        %a.mouse-over.navbar-item{:href => "/"}
-          %img{:alt => "Ernesto Vargas", :height => "70", :src => image_path("white-logo.png")}/
-      .navbar-menu
-        .navbar-end.margin-menu-end
-          %a.navbar-item.has-text-white{:href => "/"}
-            %ion-icon.icon.is-small.has-text-white{name: "logo-youtube"}
-          %a.navbar-item.has-text-white{:href => "/"}
-            %ion-icon.icon.is-small.has-text-white{name: "logo-twitter"}
-          %a.navbar-item.has-text-white{:href => "/"}
-            %ion-icon.icon.is-small.has-text-white{name: "logo-linkedin"}
-          .navbar-item.has-dropdown.is-hoverable
-            %a.navbar-link.has-text-white
-              ES
-            .navbar-dropdown.is-boxed.has-text-white
-              %a.navbar-item{:href => "/"}
-                #{I18n.t("layout.lang.langSpanish")}
-              %a.navbar-item{:href => "/"}
-                #{I18n.t("layout.lang.langEnglish")}
-          %a#button-menu.navbar-item.has-text-white{:href => "#"}
-            %ion-icon.icon.is-medium.has-text-white{name: "reorder-three-outline"}
+      .container
+        .navbar-brand
+          %a.mouse-over.navbar-item{:href => "/"}
+            %img{:alt => "Ernesto Vargas", :height => "70", :src => image_path("white-logo.png")}/
+        .navbar-menu
+          .navbar-end.margin-menu-end
+            %a.mouse-over.navbar-item.has-text-white{:href => "/"}
+              %ion-icon.icon.is-small.has-text-white{name: "logo-youtube"}
+            %a.mouse-over.navbar-item.has-text-white{:href => "/"}
+              %ion-icon.icon.is-small.has-text-white{name: "logo-twitter"}
+            %a.mouse-over.navbar-item.has-text-white{:href => "/"}
+              %ion-icon.icon.is-small.has-text-white{name: "logo-linkedin"}
+            .navbar-item.has-dropdown.is-hoverable
+              %a.navbar-link.has-text-white
+                ES
+              .navbar-dropdown.is-boxed.has-text-white
+                %a.navbar-item{:href => "/"}
+                  #{I18n.t("layout.lang.langSpanish")}
+                %a.navbar-item{:href => "/"}
+                  #{I18n.t("layout.lang.langEnglish")}
+            %a#button-menu.mouse-over.navbar-item.has-text-white{:href => "#"}
+              %ion-icon.icon.is-medium.has-text-white{name: "reorder-three-outline"}
     %header#header{:style => "background-image: url('https://www.kilianjornet.cat/img/headers/1/1581003414-inside-still010.jpg')"}
       .container{style: "z-index: 10"}
         %h1.title.has-text-white.header-title #{I18n.t("layout.header.descriptionOne")}

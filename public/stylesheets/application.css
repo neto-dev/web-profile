@@ -1,233 +1,294 @@
 * {
-    cursor: none !important;
+  cursor: none !important;
+  box-sizing: border-box;
 }
 
 html {
-    cursor: none !important;
+  cursor: none !important;
 }
 
 body {
-    cursor: none !important;
+  cursor: none !important;
 }
 
 a:hover {
-    cursor: none !important;
+  cursor: none !important;
 }
 
 .navbar {
-    padding: 20px 0 !important;
+  padding: 20px 0 !important;
 }
 
 h1 {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
+#header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(231, 69, 70, 0.4) 0%,
+    #ec3835 93%
+  );
+  mix-blend-mode: multiply;
+}
+
+#header:before {
+  content: url("../../images/ondas-header.png");
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 6;
+}
+
+#header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+}
+
+.header-titles {
+  margin-left: 50px;
+}
+
+.header-title {
+  font-size: 70px !important;
+}
+
+video {
+  object-fit: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.is-transparent {
+  background-color: transparent !important;
+}
+
+.navbar-brand {
+  margin-left: 60px;
+}
+
+.margin-menu-end {
+  margin-right: 60px !important;
+}
 .curtain-menu {
-    background-color: rgba(237, 67, 74, .5);
-    position: fixed;
-    left: -100%;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 100;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-color: rgba(237, 67, 74, 0.5);
+  position: fixed;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.active-menu{
-    animation-duration: 2s;
-    animation-name: openMenu;
+.active-menu {
+  animation-duration: 1s;
+  animation-name: openMenu;
+  left: 0 !important;
 }
 
 @keyframes openMenu {
-    from {
-        left: 100%;
-    }
+  from {
+    left: 100%;
+  }
 
-    to {
-        left: 0%;
-    }
+  to {
+    left: 0%;
+  }
 }
 
-.desactive-menu{
-    animation-duration: 2s;
-    animation-name: openMenu;
+.desactive-menu {
+  animation-duration: 1s;
+  animation-name: closeMenu;
 }
 
 @keyframes closeMenu {
-    from {
-        left: 100%;
-    }
+  0% {
+    left: 0%;
+  }
 
-    to {
-        left: 0%;
-    }
+  100% {
+    left: 100%;
+  }
 }
 
 .content-columns {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 100%;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100%;
 }
 
 .content-links-menu {
-    padding-bottom: 20px !important;
+  padding-bottom: 20px !important;
 }
 
-.option-menu-selected{
-    position: relative;
+.option-menu-selected {
+  position: relative;
 }
 
-.option-menu-selected:after{
-    content: url(../images/selected.svg);
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    max-width: 250px;
-    width: 120%;
+.option-menu-selected:after {
+  content: url(../images/selected.svg);
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: 250px;
+  width: 120%;
 }
 
 .unselected {
-    color: rgba(255,255,255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .unselected:hover {
-    color: white;
+  color: white;
 }
 
 #follower {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
 }
 
 #follower #circle1 {
-    position: absolute;
-    -webkit-animation: pulse .8s; /* Chrome, Safari, Opera */
-    animation: pulse 1s;
-    background: #EC3835;
-    border-radius: 50%;
-    height: 1em;
-    width: 1em;
-    margin-top: 0em;
-    margin-left: 0em;
+  position: absolute;
+  -webkit-animation: pulse 0.8s; /* Chrome, Safari, Opera */
+  animation: pulse 1s;
+  background: #ec3835;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  margin-top: 0em;
+  margin-left: 0em;
 }
 
 @-moz-keyframes pulse {
-    0% {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
-
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
-
-}
-
-@-o-keyframes pulse {
-    0% {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
-
-}
-
-@keyframes pulse {
-    0% {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
-}
-
-
-#follower #circle1Over {
-    position: absolute;
-    -webkit-animation: circleOver 1s; /* Chrome, Safari, Opera */
-    animation: circleOver .5s;
-    border-radius: 50%;
+  0% {
     border: 4px solid white;
     background-color: transparent;
     height: 2em;
     width: 2em;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    border: 4px solid white;
+    background-color: transparent;
+    height: 2em;
+    width: 2em;
+  }
+}
+
+@-o-keyframes pulse {
+  0% {
+    border: 4px solid white;
+    background-color: transparent;
+    height: 2em;
+    width: 2em;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    border: 4px solid white;
+    background-color: transparent;
+    height: 2em;
+    width: 2em;
+  }
+}
+
+#follower #circle1Over {
+  position: absolute;
+  -webkit-animation: circleOver 1s; /* Chrome, Safari, Opera */
+  animation: circleOver 0.5s;
+  border-radius: 50%;
+  border: 4px solid white;
+  background-color: transparent;
+  height: 2em;
+  width: 2em;
 }
 
 @-moz-keyframes circleOver {
-    from {
-        background: #EC3835;
-        height: 1em;
-        width: 1em;
-    }
+  from {
+    background: #ec3835;
+    height: 1em;
+    width: 1em;
+  }
 
-    to {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
-
+  to {
+    border: 4px solid white;
+    background-color: transparent;
+    height: 2em;
+    width: 2em;
+  }
 }
 
 @-webkit-keyframes circleOver {
-    from {
-        background: #EC3835;
-        height: 1em;
-        width: 1em;
-    }
+  from {
+    background: #ec3835;
+    height: 1em;
+    width: 1em;
+  }
 
-    to {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
-
+  to {
+    border: 4px solid white;
+    background-color: transparent;
+    height: 2em;
+    width: 2em;
+  }
 }
 
 @-o-keyframes circleOver {
-    from {
-        background: #EC3835;
-        height: 1em;
-        width: 1em;
-    }
+  from {
+    background: #ec3835;
+    height: 1em;
+    width: 1em;
+  }
 
-    to {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
-
+  to {
+    border: 4px solid white;
+    background-color: transparent;
+    height: 2em;
+    width: 2em;
+  }
 }
 
 @keyframes circleOver {
-    from {
-        background: #fff;
-        height: 1em;
-        width: 1em;
-    }
+  from {
+    background: #fff;
+    height: 1em;
+    width: 1em;
+  }
 
-    to {
-        border: 4px solid white;
-        background-color: transparent;
-        height: 2em;
-        width: 2em;
-    }
+  to {
+    border: 4px solid white;
+    background-color: transparent;
+    height: 2em;
+    width: 2em;
+  }
 }
