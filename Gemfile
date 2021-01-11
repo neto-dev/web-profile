@@ -32,7 +32,7 @@ gem 'padrino', '0.15.0'
 gem 'haml'
 
 gem 'rouge'
-gem 'redcarpet', '~> 3.3', '>= 3.3.2'
+gem 'redcarpet', '~> 3.5'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
